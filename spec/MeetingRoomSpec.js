@@ -5,11 +5,29 @@ describe("Meeting Room", function() {
     meetingRoom = new MeetingRoom();
   });
 
-  it("should have a name", function() {
+  it("should have a name and be available", function() {
     let newRoom = new MeetingRoom("Meeting Room 1");
 
     expect(newRoom.name).toEqual("Meeting Room 1");
+    expect(newRoom.available).toEqual(true);
   });
+
+  describe("#makeUnavailable", function() {
+    it("should make the room unavailable", function(){
+      meetingRoom.makeUnavailable();
+      expect(meetingRoom.available).toEqual(false);
+    });
+  });
+
+  describe("#makeAvailable", function() {
+    it("should make the room available", function(){
+      meetingRoom.makeUnavailable();
+      meetingRoom.makeAvailable();
+      expect(meetingRoom.available).toEqual(true);
+    });
+  });
+
+
 });
 
 // describe("Player", function() {
