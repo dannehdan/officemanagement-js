@@ -70,3 +70,12 @@ As an office manager
 So that I can have visibility of how the rooms are being used
 I would like to see the name of the meeting and the name of the team that is using the room
 ```
+
+* Hints on stretch functionality to implement:
+* The text sending functionality should be implemented using [Twilio API](https://www.twilio.com/docs/usage/api). You'll need to register for it. It’s free.
+* Use the `twilio-ruby` gem to access the API
+* Use the `Gemfile` to manage your gems
+* Try and make use of mocks and/or stubs so that actual texts don't get sent when your tests are run
+* However, if your code is loaded into IRB the text should actually be sent
+* Note that you can only send texts in the same country as you have your account. I.e. if you have a UK account you can only send to UK numbers.
+
